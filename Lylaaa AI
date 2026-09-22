@@ -1,0 +1,21 @@
+from openai import OpenAI
+
+client = OpenAI()
+
+print("AI Assistant is ready!")
+print("Type 'exit' to stop.")
+
+while True:
+    question = input("\nYou: ")
+
+    if question.lower() == "exit":
+        print("Goodbye!")
+        break
+
+    response = client.responses.create(
+        model="gpt-5.6",
+        instructions="You are a helpful AI assistant. Answer questions clearly and accurately. If you don't know something, say so.",
+        input=question
+    )
+
+    print("\nAI:", response.output_text)
