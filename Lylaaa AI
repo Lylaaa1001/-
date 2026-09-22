@@ -19,3 +19,12 @@ while True:
     )
 
     print("\nAI:", response.output_text)
+User asks a question
+        ↓
+Python program receives it
+        ↓
+AI model processes the question
+        ↓
+AI generates an answer
+        ↓
+Answer appears on the screen
